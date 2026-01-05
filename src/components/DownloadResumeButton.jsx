@@ -3,7 +3,7 @@ import { Download } from 'lucide-react'
 const DownloadResumeButton = () => {
   return (
     <a
-      href="/Resume.pdf"
+      href="/resume.pdf"
       download="Nishad_Hasan_Resume.pdf"
       className="flex items-center gap-2"
     >
