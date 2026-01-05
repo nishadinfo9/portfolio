@@ -234,16 +234,6 @@ export function Contact() {
                   </Button>
                 </motion.div>
               </form>
-
-              {/* Additional Info */}
-              <div className="mt-8 text-right">
-                <p className="text-sm text-muted-foreground">
-                  Activate Windows
-                </p>
-                <p className="text-xs text-muted-foreground">
-                  Go to Settings to activate Windows
-                </p>
-              </div>
             </motion.div>
           </div>
         </motion.div>
