@@ -119,6 +119,7 @@ export function Projects() {
                       src={project.image}
                       alt={project.title}
                       fill
+                      sizes="100"
                       className="object-cover transition-transform duration-700 group-hover:scale-110"
                     />
 
