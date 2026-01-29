@@ -10,6 +10,7 @@ import Image from 'next/image'
 import toast from 'react-hot-toast'
 
 export function Contact() {
+  const [IsSubmitting, setIsSubmitting] = useState(false)
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -28,6 +29,7 @@ export function Contact() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
+    setIsSubmitting(true)
 
     try {
       await emailjs
@@ -40,6 +42,13 @@ export function Contact() {
         .then(
           (response: any) => {
             console.log('SUCCESS!', response.status, response.text)
+            setFormData({
+              firstName: '',
+              lastName: '',
+              email: '',
+              message: '',
+            })
+            setIsSubmitting(false)
             toast.success('message sent successfully')
           },
           (error: any) => {
@@ -49,6 +58,7 @@ export function Contact() {
         )
     } catch (error: any) {
       console.log(error)
+      setIsSubmitting(false)
     }
   }
 
@@ -228,8 +238,9 @@ export function Contact() {
                   <Button
                     type="submit"
                     className="flex items-center gap-2 rounded-lg bg-primary px-8 py-3 font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
+                    disabled={IsSubmitting}
                   >
-                    Send
+                    {IsSubmitting ? 'Sending' : 'Send'}
                     <Send className="h-4 w-4" />
                   </Button>
                 </motion.div>
