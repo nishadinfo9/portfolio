@@ -12,7 +12,7 @@ const projects = [
     title: 'Habits Tracker Dashboard',
     description:
       'Habit Tracker is a web app that lets users create, manage, and track daily habits, visualize streaks, and maintain consistent routines with an intuitive, user-friendly interface.',
-    image: '/habit-tracker-home.png',
+    image: '/habit-tracker.png',
     technologies: [
       'React',
       'Tailwind CSS',
@@ -30,7 +30,7 @@ const projects = [
     title: 'Zap Shift Delivery',
     description:
       'Zap Shift is a full-featured courier application in Bangladesh, allowing users to send and track parcels, make secure payments, and manage deliveries with role-based dashboards for Admin, Rider, and User.',
-    image: '/zap shift project.png',
+    image: '/zap-shift.png',
     technologies: [
       'React',
       'Tailwind CSS',
@@ -46,7 +46,7 @@ const projects = [
     title: 'Local Chef Bazaar Food Application',
     description:
       'LocalChefBazaar is an online platform connecting home cooks with customers, allowing users to browse meals, place orders, make secure payments, and track deliveries in real time. It empowers chefs to earn income while offering fresh, homemade food to customers.',
-    image: '/local-chef-bazar.png',
+    image: '/chef-bazar.png',
     technologies: [
       'React',
       'Tailwind CSS',
