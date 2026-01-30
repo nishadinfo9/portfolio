@@ -12,7 +12,7 @@ const projects = [
     title: 'Habits Tracker Dashboard',
     description:
       'Habit Tracker is a web app that lets users create, manage, and track daily habits, visualize streaks, and maintain consistent routines with an intuitive, user-friendly interface.',
-    image: '/habitsflow-home.png',
+    image: '/habit-tracker-home.png',
     technologies: [
       'React',
       'Tailwind CSS',
@@ -22,8 +22,8 @@ const projects = [
       'Express.js',
       'MongoDB',
     ],
-    github: 'https://github.com/nishadinfo9/Habit_Tracker',
-    live: 'https://assignment-10-fullstack.web.app',
+    github: 'https://github.com/nishadinfo9/habit-tracker-frontend',
+    live: 'https://habit-tracker-kappa-self.vercel.app',
     featured: true,
   },
   {
