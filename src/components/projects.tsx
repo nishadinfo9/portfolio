@@ -57,7 +57,7 @@ const projects = [
       'MongoDB',
     ],
     github: 'https://github.com/nishadinfo9/LocalChefBazaar-frontend',
-    live: 'https://chef-bazaar.vercel.app',
+    live: 'https://chef-bazar-umber.vercel.app',
   },
 ]
 
