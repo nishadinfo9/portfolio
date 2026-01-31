@@ -40,7 +40,7 @@ const projects = [
       'MongoDB',
     ],
     github: 'https://github.com/nishadinfo9/Zap-shift-delivery-projects',
-    live: 'https://zap-shift-551aa.web.app',
+    live: 'https://zap-shift-plum.vercel.app',
   },
   {
     title: 'Local Chef Bazaar Food Application',
