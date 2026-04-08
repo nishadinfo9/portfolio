@@ -70,7 +70,7 @@ export function Contact() {
     },
     {
       name: 'LinkedIn',
-      href: 'https://linkedin.com/in/me-nishadhasan',
+      href: 'https://linkedin.com/in/me-nishad-hasan',
       icon: Linkedin,
     },
     {
