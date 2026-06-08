@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useRef } from 'react'
+import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { ArrowDown, Github, Linkedin, Mail, ExternalLink } from 'lucide-react'
 import { gsap } from 'gsap'
@@ -39,7 +40,7 @@ export function Hero() {
       nameRef.current.innerHTML = nameText
         .split('')
         .map(
-          (char, i) =>
+          (char) =>
             `<span class="inline-block" style="transform: translateY(100px); opacity: 0;">${char === ' ' ? '&nbsp;' : char}</span>`
         )
         .join('')
@@ -93,65 +94,92 @@ export function Hero() {
       id="home"
       className="relative flex min-h-screen items-center justify-center overflow-hidden"
     >
-      <div className="container z-10 text-center">
+      <div className="container z-10">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.2 }}
           className="space-y-8"
         >
-          {/* Main Heading with GSAP Animation */}
-          <div className="space-y-6">
-            <h1
-              ref={nameRef}
-              className="bg-gradient-to-r from-foreground via-foreground to-muted-foreground bg-clip-text text-5xl font-bold tracking-tight text-transparent sm:text-7xl lg:text-8xl"
-            >
-              Nishad Hasan
-            </h1>
+          {/* Two-Column Grid */}
+          <div className="grid items-center gap-12 lg:grid-cols-2">
+            {/* Left Column — Text + CTA */}
+            <div className="text-center lg:text-left">
+              {/* Main Heading with GSAP Animation */}
+              <div className="space-y-6">
+                <h1
+                  ref={nameRef}
+                  className="bg-gradient-to-r from-foreground via-foreground to-muted-foreground bg-clip-text text-5xl font-bold tracking-tight text-transparent sm:text-7xl lg:text-8xl"
+                >
+                  Nishad Hasan
+                </h1>
 
-            <p
-              ref={titleRef}
-              className="text-2xl font-bold text-primary sm:text-3xl lg:text-4xl"
-            >
-              Frontend Developer
-            </p>
+                <p
+                  ref={titleRef}
+                  className="text-2xl font-bold text-primary sm:text-3xl lg:text-4xl"
+                >
+                  Frontend Developer
+                </p>
 
-            <p
-              ref={subtitleRef}
-              className="mx-auto max-w-3xl text-lg leading-relaxed text-muted-foreground sm:text-xl"
+                <p
+                  ref={subtitleRef}
+                  className="mx-auto max-w-3xl text-lg leading-relaxed text-muted-foreground sm:text-xl lg:mx-0"
+                >
+                  Building interactive, high-performance web applications with
+                  <span className="font-semibold text-[#61DAFB]">
+                    {' '}
+                    React{' '}
+                  </span>{' '}
+                  and
+                  <span className="font-semibold text-[#06B6D4]">
+                    {' '}
+                    Tailwind CSS{' '}
+                  </span>
+                  for seamless user experience.
+                </p>
+              </div>
+
+              {/* CTA Buttons */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 1.5 }}
+                className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row lg:justify-start"
+              >
+                <Button
+                  onClick={scrollToProjects}
+                  size="lg"
+                  className="group relative overflow-hidden"
+                >
+                  <span className="relative z-10 flex items-center gap-2">
+                    My Projects
+                    <ExternalLink className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                  </span>
+                </Button>
+
+                <Button variant="outline" size="lg" className="group">
+                  <DownloadResumeButton />
+                </Button>
+              </motion.div>
+            </div>
+
+            {/* Right Column — Profile Image */}
+            <motion.div
+              className="flex justify-center"
+              initial={{ opacity: 0, x: 40 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
             >
-              Building interactive, high-performance web applications with
-              <span className="font-semibold text-[#61DAFB]"> React </span> and
-              <span className="font-semibold text-[#06B6D4]">
-                {' '}
-                Tailwind CSS{' '}
-              </span>
-              for seamless user experience.
-            </p>
+              <Image
+                src="/profile.png"
+                alt="Nishad Hasan — Frontend Developer"
+                width={400}
+                height={400}
+                priority
+                className="rounded-2xl object-cover"
+              />
+            </motion.div>
           </div>
-
-          {/* CTA Buttons */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 1.5 }}
-            className="flex flex-col items-center justify-center gap-4 sm:flex-row"
-          >
-            <Button
-              onClick={scrollToProjects}
-              size="lg"
-              className="group relative overflow-hidden"
-            >
-              <span className="relative z-10 flex items-center gap-2">
-                My Projects
-                <ExternalLink className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-              </span>
-            </Button>
-
-            <Button variant="outline" size="lg" className="group">
-              <DownloadResumeButton />
-            </Button>
-          </motion.div>
 
           {/* Social Links */}
           <motion.div

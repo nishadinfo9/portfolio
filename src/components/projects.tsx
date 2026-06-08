@@ -9,6 +9,20 @@ import { Button } from '@/components/ui/button'
 
 const projects = [
   {
+    title: 'Fresh Juice',
+    description:
+      'Fresh Juice this is a drink website that helps business to grow online',
+    image: '/',
+    technologies: [
+      'React',
+      'Tailwind CSS',
+      'Framer Motion',
+    ],
+    github: 'https://github.com/nishadinfo9/Fresh-Juice',
+    live: 'https://fresh-juice-plum.vercel.app',
+    featured: true,
+  },
+  {
     title: 'Habits Tracker Dashboard',
     description:
       'Habit Tracker is a web app that lets users create, manage, and track daily habits, visualize streaks, and maintain consistent routines with an intuitive, user-friendly interface.',
@@ -24,7 +38,6 @@ const projects = [
     ],
     github: 'https://github.com/nishadinfo9/habit-tracker-frontend',
     live: 'https://habit-tracker-kappa-self.vercel.app',
-    featured: true,
   },
   {
     title: 'Zap Shift Delivery',
