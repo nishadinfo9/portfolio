@@ -9,10 +9,30 @@ import { Button } from '@/components/ui/button'
 
 const projects = [
   {
+    title: 'BookNest',
+    description:
+      'BookNest is complete online book selling website to sell books in hole Bangladesh',
+    image: '/book-nest.png',
+    technologies: [
+      'Next.js',
+      'Typescript',
+      'PostgreSQL',
+      'Tailwind CSS',
+      'shadCN',
+      'Next-Auth',
+      'Zustand',
+      'Framer Motion',
+      'Stripe',
+    ],
+    github: 'https://github.com/nishadinfo9/book-nest',
+    live: 'https://book-nest-eight-gamma.vercel.app',
+    featured: true,
+  },
+  {
     title: 'Fresh Juice',
     description:
       'Fresh Juice this is a drink website that helps business to grow online',
-    image: '/',
+    image: '/fresh-juice.png',
     technologies: [
       'React',
       'Tailwind CSS',
@@ -20,7 +40,7 @@ const projects = [
     ],
     github: 'https://github.com/nishadinfo9/Fresh-Juice',
     live: 'https://fresh-juice-plum.vercel.app',
-    featured: true,
+    featured: false,
   },
   {
     title: 'Habits Tracker Dashboard',
@@ -116,7 +136,7 @@ export function Projects() {
 
           {/* Projects Grid */}
           <div className="mx-auto grid max-w-4xl gap-8 md:grid-cols-2">
-            {projects.slice(0, 4).map((project, index) => (
+            {projects.slice(0, 5).map((project, index) => (
               <motion.div
                 key={project.title}
                 initial={{ opacity: 0, y: 20 }}
