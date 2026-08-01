@@ -186,7 +186,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1.8 }}
-            className="flex justify-center gap-4"
+            className="flex  gap-4"
           >
             {socialLinks.map((link, index) => (
               <motion.a
