@@ -164,21 +164,22 @@ export function Hero() {
             </div>
 
             {/* Right Column — Profile Image */}
-            <motion.div
-              className="flex justify-center"
-              initial={{ opacity: 0, x: 40 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-            >
-              <Image
-                src="/profile.png"
-                alt="Nishad Hasan — Frontend Developer"
-                width={400}
-                height={400}
-                priority
-                className="rounded-2xl object-cover"
-              />
-            </motion.div>
+           <div className="relative mx-auto h-[420px] w-[420px]">
+              {/* Ring */}
+              <div className="absolute h-[420px] w-[420px] rounded-full border border-primary/20" />
+
+              {/* Image */}
+              <motion.div className="relative z-10 overflow-hidden rounded-full ">
+                <Image
+                  src="/profile.png"
+                  width={420}
+                  height={420}
+                  alt="Profile"
+                  className="object-contain"
+                />
+              </motion.div>
+
+            </div>
           </div>
 
           {/* Social Links */}
