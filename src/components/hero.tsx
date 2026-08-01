@@ -92,9 +92,9 @@ export function Hero() {
   return (
     <section
       id="home"
-      className="relative flex min-h-screen items-center justify-center overflow-hidden"
+      className="relative flex  min-h-screen items-center justify-center overflow-hidden"
     >
-      <div className="container z-10">
+      <div className="container z-10 mt-20 md:mt-0">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -109,7 +109,7 @@ export function Hero() {
               <div className="space-y-6">
                 <h1
                   ref={nameRef}
-                  className="bg-gradient-to-r from-foreground via-foreground to-muted-foreground bg-clip-text text-5xl font-bold tracking-tight text-transparent sm:text-7xl lg:text-8xl"
+                  className=" text-5xl font-extrabold  sm:text-6xl lg:text-7xl"
                 >
                   Nishad Hasan
                 </h1>
@@ -166,10 +166,10 @@ export function Hero() {
             {/* Right Column — Profile Image */}
            <div className="relative mx-auto md:h-[420px] md:w-[420px]">
               {/* Ring */}
-              <div className="absolute md:top-20 md:left-10 md:h-[420px] md:w-[420px] rounded-full border border-primary/20" />
+              <div className="absolute md:top-12 md:left-10 md:h-[420px] md:w-[420px] rounded-full border border-primary/20" />
 
               {/* Image */}
-              <motion.div className="relative z-10 md:top-20 md:left-10 overflow-hidden rounded-full ">
+              <motion.div className="relative z-10 md:top-12 md:left-10 overflow-hidden rounded-full ">
                 <Image
                   src="/profile.png"
                   width={420}
