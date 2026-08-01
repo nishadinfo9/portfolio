@@ -164,9 +164,9 @@ export function Hero() {
             </div>
 
             {/* Right Column — Profile Image */}
-           <div className="relative mx-auto h-[420px] w-[420px]">
+           <div className="relative mx-auto md:h-[420px] md:w-[420px]">
               {/* Ring */}
-              <div className="absolute h-[420px] w-[420px] rounded-full border border-primary/20" />
+              <div className="absolute md:h-[420px] md:w-[420px] rounded-full border border-primary/20" />
 
               {/* Image */}
               <motion.div className="relative z-10 overflow-hidden rounded-full ">
