@@ -1,6 +1,6 @@
 import { Inter } from 'next/font/google'
 import { ThemeProvider } from '@/components/theme-provider'
-import './globals.css'
+import './global.css'
 import { Metadata } from 'next'
 import { Toaster } from 'react-hot-toast'
 
@@ -10,42 +10,51 @@ const inter = Inter({
   display: 'swap',
 })
 
+const SITE_URL = 'https://nishadhasan.vercel.app'
+
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
+
   title: {
-    default: 'Nishad Hasan - Frontend Developer',
+    default: 'Nishad Hasan | Frontend Developer',
     template: '%s | Nishad Hasan',
   },
+
   description:
-    'Frontend Developer crafting exceptional user experiences with modern web technologies. Specialized in React, Next.js, and creating pixel-perfect applications.',
-  keywords: [
-    'Nishad Hasan',
-    'Frontend Developer',
-    'React Developer',
-    'Next.js Developer',
-    'TypeScript',
-    'JavaScript',
-    'UI/UX Developer',
-    'Web Development',
-    'Portfolio',
+    'Nishad Hasan is a Frontend Developer specializing in React, Next.js, TypeScript, and modern web application development.',
+
+  applicationName: 'Nishad Hasan Portfolio',
+
+  authors: [
+    {
+      name: 'Nishad Hasan',
+      url: SITE_URL,
+    },
   ],
-  authors: [{ name: 'Nishad Hasan' }],
+
   creator: 'Nishad Hasan',
+
+  alternates: {
+    canonical: '/',
+  },
+
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://nishadhasan.dev',
-    title: 'Nishad Hasan - Frontend Developer',
-    description:
-      'Frontend Developer crafting exceptional user experiences with modern web technologies.',
+    url: SITE_URL,
     siteName: 'Nishad Hasan Portfolio',
+    title: 'Nishad Hasan | Frontend Developer',
+    description:
+      'Explore the portfolio of Nishad Hasan, a Frontend Developer specializing in React, Next.js, and TypeScript.',
   },
+
   twitter: {
     card: 'summary_large_image',
-    title: 'Nishad Hasan - Frontend Developer',
+    title: 'Nishad Hasan | Frontend Developer',
     description:
-      'Frontend Developer crafting exceptional user experiences with modern web technologies.',
-    creator: '@nishadhasan',
+      'Frontend Developer specializing in React, Next.js, and TypeScript.',
   },
+
   robots: {
     index: true,
     follow: true,
