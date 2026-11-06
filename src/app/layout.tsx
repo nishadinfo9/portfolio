@@ -14,8 +14,9 @@ const SITE_URL = 'https://nishadhasan.vercel.app'
 
 export const metadata: Metadata = {
 
+
   verification: {
-    google: 'googlee042da91d3e6ed12.html',
+    google: 'h-YZJt6sYVgjHirKUkIsNuXInffVwvjXJnQfYM7GmWc',
   },
 
   metadataBase: new URL(SITE_URL),
