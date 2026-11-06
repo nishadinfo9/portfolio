@@ -17,6 +17,10 @@ const jsonLd = [
   {
     '@context': 'https://schema.org',
     '@type': 'Person',
+    sameAs: [
+      'https://github.com/nishadinfo9',
+      'https://linkedin.com/in/me-nishad-hasan',
+    ],
     '@id': `${SITE_URL}/#person`,
     name: 'Nishad Hasan',
     url: SITE_URL,
@@ -86,6 +90,14 @@ export const metadata: Metadata = {
     title: 'Nishad Hasan | Frontend Developer',
     description:
       'Explore the portfolio of Nishad Hasan, a Frontend Developer specializing in React, Next.js, and TypeScript.',
+      images:[
+          {
+      url: '/og-image.jpg',
+      width: 1200,
+      height: 630,
+      alt: 'Nishad Hasan - Frontend Developer',
+    },
+      ]
   },
 
   twitter: {
