@@ -10,7 +10,41 @@ const inter = Inter({
   display: 'swap',
 })
 
+
 const SITE_URL = 'https://nishadhasan.vercel.app'
+
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    '@id': `${SITE_URL}/#person`,
+    name: 'Nishad Hasan',
+    url: SITE_URL,
+    jobTitle: 'Frontend Developer',
+    knowsAbout: [
+      'React',
+      'Next.js',
+      'TypeScript',
+      'JavaScript',
+      'Node.js',
+      'PostgreSQL',
+      'Tailwind CSS',
+    ],
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    '@id': `${SITE_URL}/#website`,
+    name: 'Nishad Hasan Portfolio',
+    url: SITE_URL,
+    description:
+      'Personal portfolio of Nishad Hasan, Frontend Developer.',
+    publisher: {
+      '@id': `${SITE_URL}/#person`,
+    },
+  },
+]
+
 
 export const metadata: Metadata = {
 
@@ -88,6 +122,16 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange={false}
         >
+          {jsonLd.map((schema, index) => (
+            <script
+              key={index}
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{
+                __html: JSON.stringify(schema).replace(/</g, '\\u003c'),
+              }}
+            />
+          ))}
+
           {children}
         </ThemeProvider>
         <Toaster />
