@@ -92,7 +92,7 @@ export const metadata: Metadata = {
       'Explore the portfolio of Nishad Hasan, a Frontend Developer specializing in React, Next.js, and TypeScript.',
       images:[
           {
-      url: '/og-image.jpg',
+      url: '/og-image.png',
       width: 1200,
       height: 630,
       alt: 'Nishad Hasan - Frontend Developer',
