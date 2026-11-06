@@ -100,12 +100,13 @@ export const metadata: Metadata = {
       ]
   },
 
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Nishad Hasan | Frontend Developer',
-    description:
-      'Frontend Developer specializing in React, Next.js, and TypeScript.',
-  },
+twitter: {
+  card: 'summary_large_image',
+  title: 'Nishad Hasan | Frontend Developer',
+  description:
+    'Explore the portfolio of Nishad Hasan, a Frontend Developer specializing in React, Next.js, and TypeScript.',
+  images: [`${SITE_URL}/og-image.jpg`],
+},
 
   robots: {
     index: true,
