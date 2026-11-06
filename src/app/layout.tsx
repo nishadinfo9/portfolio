@@ -13,6 +13,11 @@ const inter = Inter({
 const SITE_URL = 'https://nishadhasan.vercel.app'
 
 export const metadata: Metadata = {
+
+  verification: {
+    google: 'googlee042da91d3e6ed12.html',
+  },
+
   metadataBase: new URL(SITE_URL),
 
   title: {
