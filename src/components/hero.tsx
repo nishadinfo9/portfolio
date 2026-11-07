@@ -116,26 +116,26 @@ export function Hero() {
 
                 <p
                   ref={titleRef}
-                  className="text-2xl font-bold text-primary sm:text-3xl lg:text-4xl"
+                  className="text-2xl font-bold text-primary sm:text-3xl lg:text-3xl"
                 >
-                  Frontend Developer
+                  Frontend Developer | React & Next.js Specialist
                 </p>
 
                 <p
                   ref={subtitleRef}
                   className="mx-auto max-w-3xl text-lg leading-relaxed text-muted-foreground sm:text-xl lg:mx-0"
                 >
-                  Building interactive, high-performance web applications with
+                  I build responsive, accessible, and high-performance web applications using
                   <span className="font-semibold text-[#61DAFB]">
                     {' '}
-                    React{' '}
+                    React,{' '}
                   </span>{' '}
-                  and
-                  <span className="font-semibold text-[#06B6D4]">
+                  Next.js,
+                  <span className="font-semibold text-[#3178C6]">
                     {' '}
-                    Tailwind CSS{' '}
+                    TypeScript{' '}
                   </span>
-                  for seamless user experience.
+                  and modern web technologies.
                 </p>
               </div>
 
